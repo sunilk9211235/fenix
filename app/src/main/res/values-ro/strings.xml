@@ -144,6 +144,9 @@
     <!-- Browser menu label for adding a bookmark -->
     <string name="browser_menu_add">Adaugă</string>
 
+    <!-- Browser menu label for editing a bookmark -->
+    <string name="browser_menu_edit">Editează</string>
+
     <!-- Error message to show when the user tries to access a scheme not
         handled by the app (Ex: blob, tel etc) -->
     <string name="unknown_scheme_error_message">Imposibil de conectat. Schemă URL nerecunoscută.</string>
@@ -983,6 +986,8 @@
     <string name="onboarding_firefox_account_auto_signin_confirm">Da, conectează-mă</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string name="onboarding_firefox_account_signing_in">Autentificare…</string>
+    <!-- text for the button to manually sign into Firefox account. -->
+    <string name="onboarding_firefox_account_sign_in_1">Înscrie-te</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">Rămâi deconectat</string>
     <!-- text to display in the snackbar once account is signed-in -->
@@ -1316,7 +1321,7 @@
     <!-- Placeholder text shown in the Search String TextField before a user enters text -->
     <string name="search_add_custom_engine_search_string_hint">Șir de căutare de utilizat</string>
     <!-- Description text for the Search String TextField. The %s is part of the string -->
-    <string name="search_add_custom_engine_search_string_example">Înlocuiește interogarea cu „%s”. Exemplu: \nhttps://www.google.com/search?q=%s</string>
+    <string formatted="false" name="search_add_custom_engine_search_string_example">Înlocuiește interogarea cu „%s”. Exemplu: \nhttps://www.google.com/search?q=%s</string>
     <!-- Text for the button to learn more about adding a custom search engine -->
     <string name="search_add_custom_engine_learn_more_label">Află mai multe</string>
     <!-- Accessibility description for the form in which details about the custom search engine are entered -->
