@@ -84,21 +84,6 @@ class WallpaperManager(
         }
     }
 
-    /**
-     * Returns the next available [Wallpaper], the [currentWallpaper] is the last one then
-     * the first available [Wallpaper] will be returned.
-     */
-    fun switchToNextWallpaper(): Wallpaper {
-        val values = wallpapers
-        val index = values.indexOf(currentWallpaper) + 1
-
-        return if (index >= values.size) {
-            values.first()
-        } else {
-            values[index]
-        }
-    }
-
     private fun filterExpiredRemoteWallpapers(wallpaper: Wallpaper): Boolean = when (wallpaper) {
         is Wallpaper.Remote -> {
             val notExpired = wallpaper.expirationDate?.let { Date().before(it) } ?: true

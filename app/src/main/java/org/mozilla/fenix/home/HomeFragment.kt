@@ -70,7 +70,6 @@ import org.mozilla.fenix.Config
 import org.mozilla.fenix.GleanMetrics.Events
 import org.mozilla.fenix.GleanMetrics.HomeScreen
 import org.mozilla.fenix.GleanMetrics.StartOnHome
-import org.mozilla.fenix.GleanMetrics.Wallpapers
 import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.R
 import org.mozilla.fenix.browser.BrowserAnimator.Companion.getToolbarNavOptions
@@ -755,20 +754,6 @@ class HomeFragment : Fragment() {
         if (shouldEnableWallpaper() && context.settings().wallpapersSwitchedByLogoTap) {
             binding.wordmark.contentDescription =
                 context.getString(R.string.wallpaper_logo_content_description)
-            binding.wordmark.setOnClickListener {
-                val manager = requireComponents.wallpaperManager
-                val newWallpaper = manager.switchToNextWallpaper()
-                Wallpapers.wallpaperSwitched.record(
-                    Wallpapers.WallpaperSwitchedExtra(
-                        name = newWallpaper.name,
-                        themeCollection = newWallpaper::class.simpleName
-                    )
-                )
-                manager.updateWallpaper(
-                    wallpaperContainer = binding.wallpaperImageView,
-                    newWallpaper = newWallpaper
-                )
-            }
         }
     }
 
